@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="FinGenie — Retrieval-Augmented Financial Intelligence System">
+  <title>FinGenie — Retrieval-Augmented Financial Intelligence System</title>
+  <defs>
+    <pattern id="ledger" width="1200" height="42" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="41.5" x2="1200" y2="41.5" stroke="#EDEFF3" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+    <style>
+      .display{font-family:Georgia,'Iowan Old Style','Times New Roman',serif;}
+      .body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;}
+      .mono{font-family:Consolas,'SF Mono','Cascadia Code',monospace;}
+    </style>
+  </defs>
+
+  <!-- ground -->
+  <rect x="0" y="0" width="1200" height="630" fill="#0B111C"/>
+  <rect x="0" y="0" width="1200" height="630" fill="url(#ledger)"/>
+  <rect x="0" y="0" width="1200" height="630" fill="none" stroke="#EDEFF3" stroke-opacity="0.08" stroke-width="2"/>
+
+  <!-- column divider -->
+  <line x1="660" y1="48" x2="660" y2="582" stroke="#EDEFF3" stroke-opacity="0.09" stroke-width="1"/>
+
+  <!-- ===== LEFT: masthead ===== -->
+  <text x="64" y="132" class="mono" font-size="15" letter-spacing="3" fill="#D8B36A">RAG · FINANCIAL INTELLIGENCE SYSTEM</text>
+
+  <text x="62" y="238" class="display" font-size="90" font-weight="700">
+    <tspan fill="#EDEFF3">Fin</tspan><tspan fill="#48C9A6">Genie</tspan>
+  </text>
+
+  <text x="64" y="282" class="body" font-size="23" fill="#8894A8">Retrieval-Augmented Q&amp;A over 20 ASX</text>
+  <text x="64" y="312" class="body" font-size="23" fill="#8894A8">listed companies&#8217; FY24&#8211;25 disclosures.</text>
+
+  <line x1="64" y1="350" x2="596" y2="350" stroke="#EDEFF3" stroke-opacity="0.12" stroke-width="1"/>
+
+  <!-- tags: row 1 -->
+  <g class="mono" font-size="13" letter-spacing="0.5" fill="#C9D0DC">
+    <g>
+      <rect x="64" y="390" width="160" height="34" rx="3" fill="#121A2A" stroke="#EDEFF3" stroke-opacity="0.10"/>
+      <rect x="64" y="390" width="3" height="34" fill="#48C9A6"/>
+      <text x="80" y="412">20 ASX COMPANIES</text>
+    </g>
+    <g>
+      <rect x="240" y="390" width="168" height="34" rx="3" fill="#121A2A" stroke="#EDEFF3" stroke-opacity="0.10"/>
+      <rect x="240" y="390" width="3" height="34" fill="#48C9A6"/>
+      <text x="256" y="412">LLAMA 3.2 (OLLAMA)</text>
+    </g>
+    <!-- row 2 -->
+    <g>
+      <rect x="64" y="438" width="176" height="34" rx="3" fill="#121A2A" stroke="#EDEFF3" stroke-opacity="0.10"/>
+      <rect x="64" y="438" width="3" height="34" fill="#D8B36A"/>
+      <text x="80" y="460">RAG + VECTOR SEARCH</text>
+    </g>
+    <g>
+      <rect x="256" y="438" width="145" height="34" rx="3" fill="#121A2A" stroke="#EDEFF3" stroke-opacity="0.10"/>
+      <rect x="256" y="438" width="3" height="34" fill="#D8B36A"/>
+      <text x="272" y="460">ROUGE-EVALUATED</text>
+    </g>
+  </g>
+
+  <text x="64" y="560" class="body" font-size="14" fill="#5E6779">Personal project &#183; dataset, RAG pipeline &amp; evaluation</text>
+
+  <!-- ===== RIGHT: pipeline motif ===== -->
+  <text x="706" y="116" class="mono" font-size="11" letter-spacing="2" fill="#5E6779">ANNUAL / HALF-YEAR REPORTS</text>
+
+  <!-- document stack -->
+  <rect x="706" y="160" width="150" height="196" rx="4" fill="#101827" stroke="#EDEFF3" stroke-opacity="0.08"/>
+  <rect x="718" y="148" width="150" height="196" rx="4" fill="#111A2A" stroke="#EDEFF3" stroke-opacity="0.09"/>
+  <g>
+    <rect x="730" y="136" width="150" height="196" rx="4" fill="#141D30" stroke="#EDEFF3" stroke-opacity="0.14"/>
+    <rect x="746" y="156" width="90" height="8" rx="1" fill="#EDEFF3" fill-opacity="0.18"/>
+    <rect x="746" y="182" width="118" height="5" rx="1" fill="#EDEFF3" fill-opacity="0.12"/>
+    <rect x="746" y="196" width="118" height="5" rx="1" fill="#EDEFF3" fill-opacity="0.12"/>
+    <rect x="746" y="210" width="70" height="5" rx="1" fill="#D8B36A" fill-opacity="0.9"/>
+    <text x="822" y="215" class="mono" font-size="10" fill="#D8B36A">+12.4%</text>
+    <rect x="746" y="224" width="118" height="5" rx="1" fill="#EDEFF3" fill-opacity="0.12"/>
+    <rect x="746" y="238" width="96" height="5" rx="1" fill="#EDEFF3" fill-opacity="0.12"/>
+    <rect x="746" y="252" width="118" height="5" rx="1" fill="#EDEFF3" fill-opacity="0.12"/>
+  </g>
+
+  <!-- connector into retrieval graph -->
+  <path d="M 880 236 C 915 236, 925 252, 953 258" fill="none" stroke="#48C9A6" stroke-opacity="0.6" stroke-width="1.5" stroke-dasharray="2 5"/>
+
+  <text x="950" y="190" class="mono" font-size="11" letter-spacing="2" fill="#5E6779">VECTOR RETRIEVAL</text>
+
+  <!-- graph edges -->
+  <g stroke="#8894A8" stroke-opacity="0.35" stroke-width="1">
+    <line x1="980" y1="230" x2="1030" y2="205"/>
+    <line x1="1030" y1="205" x2="1060" y2="260"/>
+    <line x1="1060" y1="260" x2="1010" y2="290"/>
+    <line x1="980" y1="230" x2="1010" y2="290"/>
+    <line x1="1060" y1="260" x2="1090" y2="320"/>
+    <line x1="1010" y1="290" x2="950" y2="300"/>
+  </g>
+
+  <!-- graph nodes -->
+  <circle cx="980" cy="230" r="5" fill="#0B111C" stroke="#8894A8" stroke-width="1.5"/>
+  <circle cx="1030" cy="205" r="5" fill="#0B111C" stroke="#8894A8" stroke-width="1.5"/>
+  <circle cx="1010" cy="290" r="5" fill="#0B111C" stroke="#8894A8" stroke-width="1.5"/>
+  <circle cx="1090" cy="320" r="5" fill="#0B111C" stroke="#8894A8" stroke-width="1.5"/>
+  <circle cx="950" cy="300" r="4" fill="#0B111C" stroke="#8894A8" stroke-width="1.5"/>
+  <circle cx="1060" cy="260" r="8" fill="#48C9A6"/>
+  <circle cx="1060" cy="260" r="12" fill="none" stroke="#48C9A6" stroke-opacity="0.5" stroke-width="1.5"/>
+
+  <!-- connector to answer -->
+  <path d="M 1068 270 C 1085 320, 1090 370, 1097 420" fill="none" stroke="#48C9A6" stroke-opacity="0.6" stroke-width="1.5" stroke-dasharray="2 5"/>
+
+  <text x="1050" y="410" class="mono" font-size="11" letter-spacing="1.5" fill="#5E6779">GENERATED ANSWER</text>
+
+  <!-- answer chip -->
+  <rect x="1050" y="418" width="110" height="62" rx="4" fill="#121A2A" stroke="#48C9A6" stroke-opacity="0.55"/>
+  <polyline points="1062,462 1080,450 1096,455 1112,432 1128,438" fill="none" stroke="#48C9A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1128" cy="438" r="2.5" fill="#48C9A6"/>
+  <text x="1062" y="475" class="mono" font-size="13" fill="#D8B36A">PAT +18.6%</text>
+</svg>

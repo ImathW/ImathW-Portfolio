@@ -451,8 +451,8 @@ article .icon {
 /* FOOTER SECTION */
 
 footer {
-  height: 26vh;
   margin: 0 1rem;
+  padding: 2rem 0;
 }
 
 footer p {

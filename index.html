@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="stylesheet" href="styling.css" />
+    <link rel="stylesheet" href="mediaquery.css" />
   </head>
   <body>
     <nav id="desktop-nav">
@@ -20,10 +20,10 @@
         </ul>
       </div>
     </nav>
-    <nav id=""hamburger-nav">
+    <nav id="hamburger-nav">
       <div class="logo">Imath Wickramarachchi</div>
       <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick=""toggleMenu()">
+        <div class="hamburger-icon" onclick="toggleMenu()">
           <span></span>
           <span></span>
           <span></span>
@@ -38,17 +38,17 @@
     </nav>
     <section id="profile">
       <div class="section__pic-container">
-        <img src="./assets/profile-pic.jpeg" alt="Imath Wickramarachchi profile picture" />
+        <img src="./assets/profile-pic.png" alt="Imath Wickramarachchi profile picture" />
       </div>
       <div class="section__text">
-        <p class="section__text__p1">I'm a Data Science undergrad at RMIT University who loves turning messy data into something people can actually use. Lately that's meant building FinGenie, a RAG-powered chatbot that helps investors make sense of ASX company reports without digging through pages of financial statements. I work mostly in Python and R, and I'm just as comfortable cleaning a dataset as I am presenting the story behind it. Outside of coursework, I manage finances for my university's Sri Lankan Association, which has taught me a lot about budgeting and working with people — skills I try to bring into every project.</p>
+        <p class="section__text__p1"> Hello,I'm</p>
         <h1 class="title">Imath Wickramarachchi</h1>
         <p class="section__text__p2">Data Science Undergraduate | Aspiring Data Analyst | ML
 Engineer</p>
         <div class="btn-container">
           <button
             class="btn btn-color-2"
-            onclick="window.open('./assets/resume.pdf')"
+            onclick="window.open('./Imath Wickramarachi.cv.pdf')"
           >
             Download CV
           </button>
@@ -78,7 +78,7 @@ Engineer</p>
       <div class="section-container">
         <div class="section__pic-container">
           <img
-            src="./assets/Profile-pic.jpeg"
+            src="./assets/profile-pic.png"
             alt="Profile picture"
             class="about-pic"
           />
@@ -94,10 +94,9 @@ Engineer</p>
               <h3>Experience</h3>
               <p>Hands-on <br />Data Science & RAG Projects</p>
               <ul>
-                <li>Built the Streamlit front end, including real-time chat, tables, and data visualisations</li>
-                <li>Collected and cleaned financial data for 20 ASX companies to support the RAG pipeline</li>
-                <li>Supported evaluation of retrieval accuracy using ROUGE-L, SBERT cosine similarity, and hallucination checks</li>
-                <li>Collaborated with a teammate on a RAG chatbot delivering instant financial insights from company reports</li>
+                <li>Cleaned financial data for 20 ASX companies</li>
+                <li>Evaluated retrieval accuracy & hallucinations</li>
+                <li>Collaborated on a RAG chatbot for finance</li>
               </ul>
             </div>
             <div class="details-container">
@@ -110,12 +109,12 @@ Engineer</p>
               <p>B.Sc. Bachelors of Data Science,RMIT University Melbourne</p>
             </div>
           </div>
-          <div class="text-container">
-            <p>
-              Beyond the technical side, I care about presenting data in ways people can actually act on — clear visualisations, plain-language explanations, and dashboards that answer the question instead of burying it. I'm currently completing my Bachelor of Data Science at RMIT, building on earlier studies in Computer Science, and I'm looking for a data analyst, BI, or data science internship where I can put that mindset to work. Outside of study, I'm active in RMIT's student and data science communities and enjoy sports, which keep me disciplined and used to working as part of a team.
-            </p>
-          </div>
         </div>
+      </div>
+      <div class="text-container">
+        <p>
+          I'm a Data Science undergrad at RMIT University who loves turning messy data into something people can actually use. Lately that's meant building FinGenie, a RAG-powered chatbot that helps investors make sense of ASX company reports without digging through pages of financial statements. I work mostly in Python and R, and I'm just as comfortable cleaning a dataset as I am presenting the story behind it. Outside of coursework, I manage finances for my university's Sri Lankan Association, which has taught me a lot about budgeting and working with people — skills I try to bring into every project.
+        </p>
       </div>
       <img
         src="./assets/arrow.png"
@@ -123,4 +122,240 @@ Engineer</p>
         class="icon arrow"
         onclick="location.href='./#experience'"
       />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Advanced Data Science</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Python</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>SQL</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>R</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>NLP</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>RAG/LLMs</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>EDA/Statistical Analysis</h3>
+                  <p>Experience</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Advanced Data Science</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Github</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Node JS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>ChromaDB</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.svg"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">WIL Team Project|FinGenie Financial AI Chatbot Assistant</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/rmit-ds-investor-assistant/WIL_RAG'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/rmit-ds-investor-assistant/WIL_RAG'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.svg"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Sentiment and Topic Analysis on Travel Experiences and Perceptions</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/ImathW/Sentiment-and-Topic-Analysis-on-Travel-Experience-and-Perceptions-By-using-Reddit-Data'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/ImathW/Sentiment-and-Topic-Analysis-on-Travel-Experience-and-Perceptions-By-using-Reddit-Data'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:examplemail@gmail.com">imathwickramarachi80@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/imathwick">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2026 Imath Wickramarachchi. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
+
 

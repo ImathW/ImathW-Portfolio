@@ -4,357 +4,376 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>Imath Wickramarachchi — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styling.css" />
     <link rel="stylesheet" href="mediaquery.css" />
   </head>
   <body>
-    <nav id="desktop-nav">
-      <div class="logo">Imath Wickramarachchi</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+    <nav id="navbar">
+      <div class="nav-inner">
+        <a href="#" class="logo">~/imath</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
-      </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Imath Wickramarachchi</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="Imath Wickramarachchi profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1"> Hello,I'm</p>
-        <h1 class="title">Imath Wickramarachchi</h1>
-        <p class="section__text__p2">Data Science Undergraduate | Aspiring Data Analyst | ML
-Engineer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/Imath Wickramarachi.cv.pdf')"
+        <div class="nav-status">
+          <span class="status-pill"><span class="status-dot"></span>Available for opportunities</span>
+          <a
+            class="btn btn-outline btn-sm"
+            href="./assets/Imath Wickramarachi.cv.pdf"
+            target="_blank"
+            rel="noopener"
           >
-            Download CV
+            <svg viewBox="0 0 24 24" class="btn-icon"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Resume
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <header id="home" class="hero">
+      <canvas id="bg-canvas"></canvas>
+      <div class="hero-grid">
+        <div class="hero-text">
+          <p class="mono-tag">Hello, I'm</p>
+          <h1 class="hero-name">Imath<br />Wickramarachchi</h1>
+          <p class="hero-typewriter">
+            I build <span id="typewriter" class="typewriter-text"></span><span class="caret">|</span>
+          </p>
+          <p class="hero-subtitle">Data Science Undergraduate | Aspiring Data Analyst | ML Engineer</p>
+          <p class="hero-bio">
+            Data rarely shows up ready to use,I like making it that way. I'm a
+            Data Science undergrad at RMIT University Melbourne who's happiest
+            digging through messy datasets to find the story hiding inside, then
+            building something people can actually act on.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-solid">
+              View Projects
+              <svg viewBox="0 0 24 24" class="btn-icon"><path d="M5 12h14m0 0l-6-6m6 6l-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="./assets/Imath Wickramarachi.cv.pdf" target="_blank" rel="noopener" class="btn btn-outline">
+              <svg viewBox="0 0 24 24" class="btn-icon"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Download Resume
+            </a>
+            <a href="https://github.com/ImathW" target="_blank" rel="noopener" class="btn btn-icon-only" aria-label="GitHub">
+              <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 015 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0012 2z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/imathwick" target="_blank" rel="noopener" class="btn btn-icon-only" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+            </a>
+          </div>
+          <p class="hero-location">
+            <span class="status-dot"></span>Melbourne, Australia &middot; Available for opportunities
+          </p>
+        </div>
+        <div class="hero-code-card">
+          <div class="code-card-header">
+            <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+            <span class="code-card-title">data_scientist.py</span>
+          </div>
+          <pre class="code-card-body"><code><span class="tok-kw">class</span> <span class="tok-class">DataScientist</span>:
+    <span class="tok-attr">focus</span> = [<span class="tok-str">"Data Science"</span>, <span class="tok-str">"Machine Learning"</span>, <span class="tok-str">"NLP"</span>]
+    <span class="tok-attr">stack</span> = [<span class="tok-str">"Python"</span>, <span class="tok-str">"R"</span>, <span class="tok-str">"SQL"</span>, <span class="tok-str">"RAG/LLMs"</span>]
+    <span class="tok-attr">studying</span> = <span class="tok-str">"B.Sc. Data Science, RMIT University"</span>
+    <span class="tok-attr">building</span> = [
+        <span class="tok-str">"FinGenie — RAG chatbot for ASX reports"</span>,
+        <span class="tok-str">"Reddit travel sentiment &amp; topic analysis"</span>,
+    ]</code></pre>
+        </div>
+      </div>
+    </header>
+
+    <section id="about" class="section">
+      <p class="mono-tag">$ whoami</p>
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="about-pic-container">
+          <img src="./assets/profile-pic.png" alt="Imath Wickramarachchi" class="about-pic" />
+        </div>
+        <div class="about-copy">
+          <p>
+            I'm a Data Science student at RMIT University, and what I enjoy most
+            is the moment a pile of raw numbers turns into something someone can
+            actually act on. Most of my coursework and projects live in Python
+            and R,cleaning data, building models, and figuring out how to
+            explain what they mean. Outside the classroom, I volunteer as
+            Treasurer for the RMIT Sri Lankan Association, which has turned into
+            one of the best places to put that academic knowledge to real use,
+            budgeting real money and using data to make decisions the club
+            actually relies on. It's taught me as much about responsibility and
+            working with people as any subject has.
+          </p>
+          <div class="about-stats">
+            <div class="stat-card">
+              <p class="stat-label">Current Focus</p>
+              <p class="stat-value">Designing interactive dashboards to visualize complex datasets.</p>
+            </div>
+            <div class="stat-card">
+              <p class="stat-label">Education</p>
+              <p class="stat-value">B.Sc. Bachelor of Data Science, RMIT University Melbourne</p>
+            </div>
+            <div class="stat-card">
+              <p class="stat-label">Main Interests</p>
+              <p class="stat-value">Predictive modelling,Data Visualiziation,Sports Analytics,Business Intelligence (BI),Analytics Storytelling</p>
+            </div>
+            <div class="stat-card">
+              <p class="stat-label">Preferred Technologies</p>
+              <p class="stat-value">Python, R, SQL, RAG/LLMs,Pandas & Numpy,Power BI, Git & Github</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <p class="mono-tag">$ ls ./skills</p>
+      <h2 class="section-title">Skills &amp; Stack</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3 class="skill-card-title">Languages</h3>
+          <div class="skill-row">
+            <div class="skill-row-head"><span>Python</span><span class="pill pill-experienced">Experienced</span></div>
+            <p class="skill-desc">Primary language for analysis and ML work</p>
+          </div>
+          <div class="skill-row">
+            <div class="skill-row-head"><span>R</span><span class="pill pill-intermediate">Intermediate</span></div>
+            <p class="skill-desc">Statistical analysis and reporting</p>
+          </div>
+          <div class="skill-row">
+            <div class="skill-row-head"><span>SQL</span><span class="pill pill-intermediate">Intermediate</span></div>
+            <p class="skill-desc">Querying and shaping relational data</p>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3 class="skill-card-title">AI &amp; NLP</h3>
+          <div class="skill-row">
+            <div class="skill-row-head"><span>NLP</span><span class="pill pill-intermediate">Intermediate</span></div>
+            <p class="skill-desc">Sentiment and topic analysis on text data</p>
+          </div>
+          <div class="skill-row">
+            <div class="skill-row-head"><span>RAG / LLMs</span><span class="pill pill-intermediate">Intermediate</span></div>
+            <p class="skill-desc">Retrieval-augmented chatbots over documents</p>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3 class="skill-card-title">Analytics</h3>
+          <div class="skill-row">
+            <div class="skill-row-head"><span>EDA / Statistical Analysis</span><span class="pill pill-experienced">Experienced</span></div>
+            <p class="skill-desc">Exploring and cleaning raw datasets</p>
+          </div>
+        </div>
+        <div class="skill-card">
+          <p class="mono-tag mono-tag-sm">$ ls ./databases</p>
+          <h3 class="skill-card-title">Databases</h3>
+          <div class="skill-row">
+            <div class="skill-row-head"><span>MySQL</span><span class="pill pill-experienced">Experienced</span></div>
+            <p class="skill-desc">Relational database design and structured queries</p>
+          </div>
+          <div class="skill-row">
+            <div class="skill-row-head"><span>MongoDB</span><span class="pill pill-intermediate">Intermediate</span></div>
+            <p class="skill-desc">Document-based storage for unstructured data</p>
+          </div>
+        </div>
+        <div class="skill-card">
+          <p class="mono-tag mono-tag-sm">$ ls ../tools</p>
+          <h3 class="skill-card-title">Development Tools</h3>
+          <div class="skill-row">
+            <div class="skill-row-head"><span>GitHub</span><span class="pill pill-experienced">Experienced</span></div>
+            <p class="skill-desc">Version control and team collaboration</p>
+          </div>
+          <div class="skill-row">
+            <div class="skill-row-head"><span>Node.JS</span><span class="pill pill-intermediate">Intermediate</span></div>
+            <p class="skill-desc">Building and running JavaScript services</p>
+          </div>
+          <div class="skill-row">
+            <div class="skill-row-head"><span>HTML</span><span class="pill pill-intermediate">Intermediate</span></div>
+            <p class="skill-desc">Structuring web interfaces</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <p class="mono-tag">$ log --experience</p>
+      <h2 class="section-title">Experience &amp; Education</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="timeline-dot"></span>
+          <p class="mono-tag mono-tag-sm">commit: academic milestone</p>
+          <h3 class="timeline-title">B.Sc. Bachelor of Data Science</h3>
+          <p class="timeline-meta">RMIT University Melbourne &middot; In progress</p>
+          <p class="timeline-desc">
+            Coursework spanning statistics, machine learning,  and
+            data visualization, with hands-on practice in Python (pandas), R,
+            and SQL.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Statistics</span><span class="tag">Machine Learning</span><span class="tag">Database</span> <span class="tag">R</span> <span class="tag">Deep Learning</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-dot"></span>
+          <p class="mono-tag mono-tag-sm">commit: project shipped</p>
+          <h3 class="timeline-title">FinGenie Finance Ai Chatbot &amp; RMIT WIL Team project</h3>
+          <p class="timeline-meta">Completed &middot; 2025</p>
+          <p class="timeline-desc">
+            Cleaned financial data for 20 ASX companies, evaluated retrieval
+            accuracy and hallucinations, and collaborated on a RAG chatbot for
+            finance.
+          </p>
+          <div class="tag-row">
+            <span class="tag">RAG / LLMs</span><span class="tag">ChromaDB</span><span class="tag">NLP</span><span class="tag">EDA</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-dot"></span>
+          <p class="mono-tag mono-tag-sm">commit: technical growth</p>
+          <h3 class="timeline-title">Treasurer</h3>
+          <p class="timeline-meta">RMIT Srilankan Association&middot; Alongside coursework</p>
+          <p class="timeline-desc">
+            I took this on alongside coursework because it's a rare chance to
+            put the classroom stuff to real use — tracking budgets and making
+            data-driven decisions with actual money, not a practice dataset.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Budgeting</span><span class="tag">Team Collaboration</span><span class="tag">Data Driven</span><span class="tag">Stake holder management</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <p class="mono-tag">$ ls ./projects</p>
+      <h2 class="section-title">Featured Projects</h2>
+      <p class="section-subtitle">Things I've built with data, models, and a lot of cleaning.</p>
+      <div class="projects-grid">
+        <article class="project-card project-card-purple">
+          <div class="project-visual">
+            <img src="./assets/project-1.jpg" alt="FinGenie project preview" />
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">FinGenie — Financial AI Chatbot Assistant</h3>
+            <p class="project-line"><span class="mono-tag-inline">problem:</span> Investors have to dig through pages of ASX company financial statements to answer simple questions.</p>
+            <p class="project-line"><span class="mono-tag-inline">built:</span> A WIL team project which is a  RAG-powered chatbot that helps investors make sense of ASX company reports.</p>
+            <div class="tag-row">
+              <span class="tag">20 ASX companies</span><span class="tag">LLAMA 3.2 (Ollama)</span><span class="tag">RAG + Vector search</span><span class="tag">ROUGE-evaluated</span>
+            </div>
+            <div class="project-actions">
+              <a class="btn btn-solid btn-sm" href="https://github.com/rmit-ds-investor-assistant/WIL_RAG" target="_blank" rel="noopener">GitHub</a>
+              <a class="btn btn-outline btn-sm" href="https://github.com/rmit-ds-investor-assistant/WIL_RAG" target="_blank" rel="noopener">Live Demo</a>
+            </div>
+          </div>
+        </article>
+        <article class="project-card project-card-teal">
+          <div class="project-visual">
+            <img src="./assets/project-2.jpg" alt="Travel sentiment analysis project preview" />
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Sentiment and Topic Analysis on Travel Experiences and Perceptions</h3>
+            <p class="project-line"><span class="mono-tag-inline">problem:</span> Travel opinions are scattered across long, unstructured Reddit discussions.</p>
+            <p class="project-line"><span class="mono-tag-inline">built:</span> An NLP pipeline over Reddit data to surface sentiment and recurring travel topics.</p>
+            <div class="tag-row">
+              <span class="tag">Reddit data</span><span class="tag">NLP pipeline</span><span class="tag">Topic modeling (LDA)</span><span class="tag">Sentiment classification</span>
+            </div>
+            <div class="project-actions">
+              <a class="btn btn-solid btn-sm" href="https://github.com/ImathW/Sentiment-and-Topic-Analysis-on-Travel-Experience-and-Perceptions-By-using-Reddit-Data" target="_blank" rel="noopener">GitHub</a>
+              <a class="btn btn-outline btn-sm" href="https://github.com/ImathW/Sentiment-and-Topic-Analysis-on-Travel-Experience-and-Perceptions-By-using-Reddit-Data" target="_blank" rel="noopener">Live Demo</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="pipeline" class="section pipeline-section">
+      <p class="mono-tag">$ python workflow.py --verbose</p>
+      <h2 class="section-title">Turning raw data into useful systems.</h2>
+      <p class="section-subtitle">
+        I like turning raw data into something people can actually use —
+        cleaning it, modeling it, and presenting the story behind it.
+      </p>
+      <div class="pipeline-grid">
+        <div class="pipeline-step"><p class="pipeline-num">01</p><p class="pipeline-label">collect data</p></div>
+        <div class="pipeline-step"><p class="pipeline-num">02</p><p class="pipeline-label">clean &amp; preprocess</p></div>
+        <div class="pipeline-step"><p class="pipeline-num">03</p><p class="pipeline-label">explore (EDA)</p></div>
+        <div class="pipeline-step"><p class="pipeline-num">04</p><p class="pipeline-label">model &amp; evaluate</p></div>
+        <div class="pipeline-step"><p class="pipeline-num">05</p><p class="pipeline-label">share insights</p></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <p class="mono-tag">$ contact --open</p>
+      <h2 class="section-title">Let's build something useful.</h2>
+      <div class="contact-grid">
+        <div class="contact-links">
+          <a class="contact-row" href="mailto:imathwickramarachi80@gmail.com">
+            <svg viewBox="0 0 24 24" class="contact-icon"><path fill="none" stroke="currentColor" stroke-width="2" d="M3 6h18v12H3z"/><path fill="none" stroke="currentColor" stroke-width="2" d="M3 7l9 6 9-6"/></svg>
+            imathwickramarachi80@gmail.com
+          </a>
+          <button class="contact-row" id="copy-email-btn" type="button">
+            <svg viewBox="0 0 24 24" class="contact-icon"><rect x="9" y="9" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" d="M5 15V5a2 2 0 012-2h10"/></svg>
+            <span id="copy-email-label">copy email</span>
           </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
+          <a class="contact-row" href="https://www.linkedin.com/in/imathwick" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" class="contact-icon"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+            LinkedIn
+          </a>
+          <a class="contact-row" href="https://github.com/ImathW" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" class="contact-icon"><path fill="currentColor" d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 015 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0012 2z"/></svg>
+            GitHub
+          </a>
+          <a class="contact-row contact-row-accent" href="./assets/Imath Wickramarachi.cv.pdf" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" class="contact-icon"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Download Resume
+          </a>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="cf-name">name</label>
+              <input type="text" id="cf-name" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form-field">
+              <label for="cf-email">email</label>
+              <input type="email" id="cf-email" name="email" placeholder="you@example.com" required />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="cf-subject">subject</label>
+            <input type="text" id="cf-subject" name="subject" placeholder="What's this about?" required />
+          </div>
+          <div class="form-field">
+            <label for="cf-message">message</label>
+            <textarea id="cf-message" name="message" rows="5" placeholder="Tell me a bit about the role or project." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-solid">
+            <svg viewBox="0 0 24 24" class="btn-icon"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            Send message
           </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/imathwick'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/ImathW'"
-          />
-        </div>
+          <p class="form-note">
+            This form composes an email to imathwickramarachi80@gmail.com in
+            your mail client — no message is stored anywhere.
+          </p>
+        </form>
       </div>
     </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/profile-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container" id="experience">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>Hands-on <br />Data Science & RAG Projects</p>
-              <ul>
-                <li>Cleaned financial data for 20 ASX companies</li>
-                <li>Evaluated retrieval accuracy & hallucinations</li>
-                <li>Collaborated on a RAG chatbot for finance</li>
-              </ul>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>B.Sc. Bachelors of Data Science,RMIT University Melbourne</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="text-container">
-        <p>
-          I'm a Data Science undergrad at RMIT University who loves turning messy data into something people can actually use. Lately that's meant building FinGenie, a RAG-powered chatbot that helps investors make sense of ASX company reports without digging through pages of financial statements. I work mostly in Python and R, and I'm just as comfortable cleaning a dataset as I am presenting the story behind it. Outside of coursework, I manage finances for my university's Sri Lankan Association, which has taught me a lot about budgeting and working with people — skills I try to bring into every project.
-        </p>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Advanced Data Science</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Python</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SQL</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>R</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>NLP</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>RAG/LLMs</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>EDA/Statistical Analysis</h3>
-                  <p>Experience</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Advanced Data Science</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Github</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>ChromaDB</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-1.jpg"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">WIL Team Project|FinGenie Financial AI Chatbot Assistant</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/rmit-ds-investor-assistant/WIL_RAG'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/rmit-ds-investor-assistant/WIL_RAG'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-2.jpg"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Sentiment and Topic Analysis on Travel Experiences and Perceptions</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/ImathW/Sentiment-and-Topic-Analysis-on-Travel-Experience-and-Perceptions-By-using-Reddit-Data'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/ImathW/Sentiment-and-Topic-Analysis-on-Travel-Experience-and-Perceptions-By-using-Reddit-Data'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:examplemail@gmail.com">imathwickramarachi80@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/imathwick">LinkedIn</a></p>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
+
+    <footer class="site-footer">
+      <p>Built by Imath Wickramarachchi &middot; <a href="#home">Back to top</a></p>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
-
-
